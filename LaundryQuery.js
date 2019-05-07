@@ -1,12 +1,12 @@
 //Clearwater Labs 2019
 import React, { Component } from 'react';
 import Text from 'react-native';
-import { graphql, ApolloProvider } from 'react-apollo';
-import gql from 'graphql-tag';
+import { QueryRender, graphql } from 'react-relay';
 
-function LaundryRoom({ data: { loading, laundryRoom } }) {
-  if (loading) return <Text>Loading</Text>;
-  else {
+const LaundryQuery = ({ loading, laundryRoom }) => {
+  if (loading) {
+    return <Text>Loading</Text>;
+  }else if (laundryRoom){
     return (
       <select name="laundryRoom">
         {data.laundryRooms.map(laundryRoom => (

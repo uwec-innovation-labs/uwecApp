@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-class Spectator extends Component{
+class SpectatorScreen extends Component{
   static navigationOptions = {
     title: 'Spectator',
   }
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
 
   });
 
-export default Spectator;
+export default SpectatorScreen;
