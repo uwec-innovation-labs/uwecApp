@@ -19,14 +19,32 @@ const LaundryQuery = ({ loading, laundryRoom }) => {
   }
 }
 
-export default graphql(gql`
-  query alllaundrymachines {
-    laundryRoom {
-      id
-      totalNumWashers
-      totalNumDryers
-      washersAvailable
-      dryersAvailable
-    }
-  }
-`)(LaundryRoom);
+const lQuery = (props) => {
+  return(
+    <QueryRender
+      environment = {environment}
+      query = {graphql`
+        query alllaundrymachines {
+          laundryRoom {
+            id
+            totalNumDryers
+            totalNumWashers
+            dryersAvailable
+          }
+        }
+      `}
+      render={renderQuery}
+      />
+  );
+}
+// export default graphql(graphql`
+//   query alllaundrymachines {
+//     laundryRoom {
+//       id
+//       totalNumWashers
+//       totalNumDryers
+//       washersAvailable
+//       dryersAvailable
+//     }
+//   }
+// `)(LaundryRoom);
