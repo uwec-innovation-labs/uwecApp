@@ -2,41 +2,35 @@
 import React, { Component } from 'react';
 import Text from 'react-native';
 import { QueryRender, graphql } from 'react-relay';
+import Prisma from 'prisma';
+const prisma = new Prisma({
+  endpoint: 'http://localhost:4466/',
+})
+const users = await prisma.users()
+const LaundryQuery = () => {
+  <Text>${users}</Text>
+};
 
-const LaundryQuery = ({ loading, laundryRoom }) => {
-  if (loading) {
-    return <Text>Loading</Text>;
-  }else if (laundryRoom){
-    return (
-      <select name="laundryRoom">
-        {data.laundryRooms.map(laundryRoom => (
-          <option key={laundryRoom.id} value={laundryRoom.totalNumWashers}>
-            {laundryRoom.totalNumWashers}
-          </option>
-        ))}
-      </select>
-    );
-  }
-}
+export default LaundryQuery;
 
-const lQuery = (props) => {
-  return(
-    <QueryRender
-      environment = {environment}
-      query = {graphql`
-        query alllaundrymachines {
-          laundryRoom {
-            id
-            totalNumDryers
-            totalNumWashers
-            dryersAvailable
-          }
-        }
-      `}
-      render={renderQuery}
-      />
-  );
-}
+// const lQuery = (props) => {
+//   return(
+//     <QueryRender
+//       environment = {environment}
+//       query = {graphql`
+//         query alllaundrymachines {
+//           laundryRoom {
+//             id
+//             totalNumDryers
+//             totalNumWashers
+//             dryersAvailable
+//           }
+//         }
+//       `}
+//       render={renderQuery}
+//       />
+//   );
+// }
 // export default graphql(graphql`
 //   query alllaundrymachines {
 //     laundryRoom {
