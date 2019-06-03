@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 26878,
+  "expoServerNgrokUrl": "https://zc-d65.sullivanprell.uwecapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.zc-d65.sullivanprell.uwecapp.exp.direct",
+  "ngrokPid": 26897,
+  "webpackServerPort": null
+}

@@ -1,44 +1,25 @@
 {
-  "name": "UWECApp",
-  "version": "0.0.1",
-  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
-  },
-  "dependencies": {
-    "apollo-boost": "^0.3.1",
-    "apollo-client": "^2.5.1",
-    "babel-plugin-relay": "^4.0.0",
-    "graphql": "^14.2.1",
-    "graphql-js-query": "^0.1.5",
-    "graphql-tag": "^2.10.1",
-    "prisma": "^1.32.2",
-    "react": "16.8.6",
-    "react-apollo": "^2.5.5",
-    "react-art": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-native": "^0.59.8",
-    "react-native-custom-components": "^1.0.0",
-    "react-native-gesture-handler": "^1.1.0",
-    "react-native-link": "^4.1.0",
-    "react-native-navigation": "^2.18.4",
-    "react-native-web": "^0.11.2",
-    "react-navigation": "^3.9.1",
-    "react-navigation-drawer": "^1.2.1",
-    "react-relay": "^4.0.0",
-    "relay-compiler": "^4.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/runtime": "^7.4.3",
-    "babel-jest": "^24.7.1",
-    "babel-plugin-graphql-tag": "^2.1.0",
-    "jest": "^24.7.1",
-    "metro-react-native-babel-preset": "^0.53.1",
-    "react-test-renderer": "16.8.6"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "jest": {
-    "preset": "react-native"
-  }
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/samples": "2.1.1",
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-navigation": "^3.0.9"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0",
+    "jest-expo": "^32.0.0"
+  },
+  "private": true
 }
