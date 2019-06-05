@@ -35,7 +35,7 @@ class LaundryScreen extends Component {
   render() {
     const laundryRoom = () => {
       return axios({
-        url: 'http://192.168.1.28:4000/graphql',
+        url: 'http://localhost:4000/graphql',
         method: 'post',
         data: {
           query: `
