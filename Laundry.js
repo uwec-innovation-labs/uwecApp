@@ -25,7 +25,7 @@ class LaundryScreen extends Component {
   updateLaundry = laundry => {
     //this.laundryRoomSelection(this.state.laundryRoom);
     axios({
-      url: 'http://35.247.62.2:4000/graphql',
+      url: 'ASK SULLY FOR THE IP',
       method: 'post',
       data: {
         query: `
