@@ -10,6 +10,7 @@ import LaundryScreen from './Laundry.js';
 import styles from './StyleSheet';
 import SpectatorScreen from './Spectator.js';
 import BusTrackingScreen from './BusTracking.js';
+import AboutScreen from './About.js';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 class HomeScreen extends React.Component {
@@ -62,6 +63,19 @@ class HomeScreen extends React.Component {
             />
           </TouchableHighlight>
         </View>
+        <View style={styles.newsAndCarText}>
+          <Text>About</Text>
+        </View>
+        <View style={styles.newsAndCarView}>
+          <TouchableHighlight
+            onPress={() => this.props.navigation.navigate('About')}
+          >
+            <Image
+              style={styles.newsImage}
+              source={require('./assets/logo.png')}
+            />
+          </TouchableHighlight>
+        </View>
       </View>
     );
   };
@@ -71,7 +85,8 @@ const HomePageNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
   Laundry: { screen: LaundryScreen },
   Spectator: { screen: SpectatorScreen },
-  BusTracking: { screen: BusTrackingScreen }
+  BusTracking: { screen: BusTrackingScreen },
+  About: { screen: AboutScreen }
 });
 
 const App = createAppContainer(HomePageNavigator);
