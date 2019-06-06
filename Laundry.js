@@ -8,7 +8,6 @@ import {
   Picker
 } from 'react-native';
 const axios = require('axios');
-import { LaundryQuery } from './LaundryQuery.js';
 
 class LaundryScreen extends Component {
   static navigationOptions = {
@@ -25,7 +24,7 @@ class LaundryScreen extends Component {
   updateLaundry = laundry => {
     //this.laundryRoomSelection(this.state.laundryRoom);
     axios({
-      url: 'ASK SULLY FOR THE IP',
+      url: 'http://35.247.62.2:4000/graphql',
       method: 'post',
       data: {
         query: `

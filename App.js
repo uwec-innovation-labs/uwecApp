@@ -72,7 +72,7 @@ class HomeScreen extends React.Component {
           >
             <Image
               style={styles.newsImage}
-              source={require('./assets/logo.png')}
+              source={require('./assets/lineLogo.png')}
             />
           </TouchableHighlight>
         </View>
