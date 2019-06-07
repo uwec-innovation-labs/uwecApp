@@ -9,21 +9,30 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  containerLaundryText: {
-    backgroundColor: '#fff',
-    marginTop: '60%'
+  laundryContainer: {
+    // flex: 1,
+    // backgroundColor: '#fff',
+    // marginTop: '5%',
+    // alignItems: 'center',
+    // justifyContent: 'space-between'
   },
-  // title: {
-  //   fontSize: 25,
-  //   textAlign: "left",
-  //   margin: 20,
-  //   marginTop: 40
-  // },
+  containerLaundryText: {
+  },
+  title: {
+    fontSize: 25,
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    margin: 20,
+    marginTop: 40
+  },
   laundryImage: {
     height: '100%',
     //width: "100%",
     borderRadius: 10,
-    resizeMode: 'center'
+    resizeMode: 'center',
+    flex: 1
   },
   logoImage: {
     height: '100%',

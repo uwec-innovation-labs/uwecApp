@@ -52,11 +52,11 @@ class LaundryScreen extends Component {
   render() {
     //const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text>Testing text</Text>
+      <View style={styles.laundryContainer}>
+        <Text style={styles.title}>Select a Living Hall</Text>
         <Picker
           selectedValue={this.state.laundryRoom}
-          style={{ height: 50, width: 100 }}
+          style={{}}
           onValueChange={(itemValue, itemIndex) =>
             this.updateLaundry(itemValue)
           }
