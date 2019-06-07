@@ -41,7 +41,7 @@ class HomeScreen extends React.Component {
           </View>
           <View style={styles.navigationBox}>
             <Text style={styles.navigationText}> Spectator</Text>
-            <TouchableHighlight
+            <TouchableOpacity
               onPress={() => this.props.navigation.navigate('Spectator')}
             >
               <Image
@@ -49,14 +49,15 @@ class HomeScreen extends React.Component {
                 source={require('./assets/news.png')}
                 resizeMode="contain"
               />
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.horizontalLineThin} />
         <View style={styles.navigationContainer}>
           <View style={styles.navigationBox}>
             <Text style={styles.navigationText}>Bus Tracking</Text>
             <View>
-              <TouchableHighlight
+              <TouchableOpacity
                 onPress={() => this.props.navigation.navigate('BusTracking')}
               >
                 <Image
@@ -64,12 +65,12 @@ class HomeScreen extends React.Component {
                   source={require('./assets/bus.png')}
                   resizeMode="contain"
                 />
-              </TouchableHighlight>
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.navigationBox}>
             <Text style={styles.navigationText}>About</Text>
-            <TouchableHighlight
+            <TouchableOpacity
               onPress={() => this.props.navigation.navigate('About')}
             >
               <Image
@@ -77,9 +78,20 @@ class HomeScreen extends React.Component {
                 source={require('./assets/lineLogo.png')}
                 resizeMode="contain"
               />
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.horizontalLine} />
+        {/* <View>
+          <Text style={styles.informationText}>Pardon our dust!</Text>
+          <Text style={styles.informationText}>
+            Just like campus, this app is still under construction!
+          </Text>
+          <Text style={styles.informationText}>
+            Check back soon for new features!
+          </Text>
+        </View>
+        <View style={styles.horizontalLine} /> */}
       </View>
     );
   };

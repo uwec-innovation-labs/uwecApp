@@ -16,12 +16,33 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(122, 122, 122, 0.11)'
   },
+  informationText: {
+    fontSize: 16,
+    textAlign: 'center',
+    justifyContent: 'center'
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
     marginTop: '5%',
     alignItems: 'center',
     justifyContent: 'space-between'
+  },
+  horizontalLine: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+    marginLeft: 50,
+    marginRight: 50,
+    marginTop: 8,
+    marginBottom: 8
+  },
+  horizontalLineThin: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 0.5,
+    marginLeft: 60,
+    marginRight: 60,
+    marginTop: 6,
+    marginBottom: 6
   },
   laundryContainer: {
     // flex: 1,
