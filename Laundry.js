@@ -53,7 +53,7 @@ class LaundryScreen extends Component {
     //const { navigate } = this.props.navigation;
     return (
       <View style={styles.laundryContainer}>
-        <Text style={styles.title}>Select a Living Hall</Text>
+        <Text style={styles.title}>Select a Residence Hall</Text>
         <Picker
           selectedValue={this.state.laundryRoom}
           style={{}}

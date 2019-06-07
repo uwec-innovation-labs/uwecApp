@@ -21,7 +21,14 @@ class AboutScreen extends React.Component {
           <Text>
             This app is developed by Clearwater Labs in Eau Claire, WI
           </Text>
-          <Text>Find us at clearwaterlabs.org</Text>
+
+          <Text>Find us at</Text>
+          <TouchableOpacity
+            onPress={() => Linking.openURL('https://www.clearwaterlabs.org')}
+          >
+            <Text style={{ color: 'blue' }}>www.clearwaterlabs.org</Text>
+          </TouchableOpacity>
+
           <Text>Version Alpha 1.0</Text>
           <Text>This app is currently under development</Text>
           <Text>Check back soon for new features!</Text>

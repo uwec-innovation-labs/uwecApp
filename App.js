@@ -25,56 +25,60 @@ class HomeScreen extends React.Component {
 
   render = () => {
     return (
-      <View style={styles.container}>
-        <View style={styles.laundryView}>
-          <Text>Laundry Notifier</Text>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Laundry')}
-          >
-            <Image
-              style={styles.laundryImage}
-              source={require('./assets/laundry.png')}
-            />
-          </TouchableOpacity>
+      <View>
+        <View style={styles.navigationContainer}>
+          <View style={styles.navigationBox}>
+            <Text style={styles.navigationText}>Laundry Notifier</Text>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Laundry')}
+            >
+              <Image
+                style={styles.navigationImage}
+                source={require('./assets/laundry.png')}
+                resizeMode="contain"
+              />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.navigationBox}>
+            <Text style={styles.navigationText}> Spectator</Text>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('Spectator')}
+            >
+              <Image
+                style={styles.navigationImage}
+                source={require('./assets/news.png')}
+                resizeMode="contain"
+              />
+            </TouchableHighlight>
+          </View>
         </View>
-        <View style={styles.newsAndCarText}>
-          <Text style={styles.newsText}> Spectator</Text>
-        </View>
-        <View style={styles.newsAndCarView}>
-          <TouchableHighlight
-            onPress={() => this.props.navigation.navigate('Spectator')}
-          >
-            <Image
-              style={styles.newsImage}
-              source={require('./assets/index.png')}
-            />
-          </TouchableHighlight>
-        </View>
-        <View style={styles.newsAndCarText}>
-          <Text>Bus Tracking</Text>
-        </View>
-        <View style={styles.newsAndCarView}>
-          <TouchableHighlight
-            onPress={() => this.props.navigation.navigate('BusTracking')}
-          >
-            <Image
-              style={styles.newsImage}
-              source={require('./assets/bus.png')}
-            />
-          </TouchableHighlight>
-        </View>
-        <View style={styles.newsAndCarText}>
-          <Text>About</Text>
-        </View>
-        <View style={styles.newsAndCarView}>
-          <TouchableHighlight
-            onPress={() => this.props.navigation.navigate('About')}
-          >
-            <Image
-              style={styles.newsImage}
-              source={require('./assets/lineLogo.png')}
-            />
-          </TouchableHighlight>
+        <View style={styles.navigationContainer}>
+          <View style={styles.navigationBox}>
+            <Text style={styles.navigationText}>Bus Tracking</Text>
+            <View>
+              <TouchableHighlight
+                onPress={() => this.props.navigation.navigate('BusTracking')}
+              >
+                <Image
+                  style={styles.navigationImage}
+                  source={require('./assets/bus.png')}
+                  resizeMode="contain"
+                />
+              </TouchableHighlight>
+            </View>
+          </View>
+          <View style={styles.navigationBox}>
+            <Text style={styles.navigationText}>About</Text>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('About')}
+            >
+              <Image
+                style={styles.navigationImageLogo}
+                source={require('./assets/lineLogo.png')}
+                resizeMode="contain"
+              />
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
     );
