@@ -4,7 +4,8 @@ import {
   View,
   Image,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
+  Dimensions
 } from 'react-native'
 import LaundryScreen from './Laundry.js'
 import styles from './StyleSheet'
@@ -25,8 +26,8 @@ class HomeScreen extends React.Component {
 
   render = () => {
     return (
-      <View>
-        <View style={styles.navigationContainer}>
+      <View style={styles.navigationContainer}>
+        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
           <TouchableOpacity
             onPress={() => this.props.navigation.navigate('Laundry')}
           >
@@ -36,63 +37,51 @@ class HomeScreen extends React.Component {
               <Image
                 style={styles.navigationImage}
                 source={require('./assets/laundry.png')}
-                resizeMode="contain"
+                resizeMode={'contain'}
               />
             </View>
           </TouchableOpacity>
-          <View style={styles.navigationBox}>
-            <Text style={styles.navigationText}> Spectator</Text>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Spectator')}
-            >
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Spectator')}
+          >
+            <View style={styles.navigationBox}>
+              <Text style={styles.navigationText}> Spectator</Text>
               <Image
                 style={styles.navigationImage}
                 source={require('./assets/news.png')}
-                resizeMode="contain"
+                resizeMode={'contain'}
               />
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.horizontalLineThin} />
-        <View style={styles.navigationContainer}>
-          <View style={styles.navigationBox}>
-            <Text style={styles.navigationText}>Bus Tracking</Text>
-            <View>
-              <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('BusTracking')}
-              >
-                <Image
-                  style={styles.navigationImage}
-                  source={require('./assets/bus.png')}
-                  resizeMode="contain"
-                />
-              </TouchableOpacity>
             </View>
-          </View>
-          <View style={styles.navigationBox}>
-            <Text style={styles.navigationText}>About</Text>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('About')}
-            >
+          </TouchableOpacity>
+        </View>
+        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('BusTracking')}
+          >
+            <View style={styles.navigationBox}>
+              <Text style={styles.navigationText}> Bus Tracking</Text>
+
               <Image
-                style={styles.navigationImageLogo}
-                source={require('./assets/lineLogo.png')}
-                resizeMode="contain"
+                style={styles.navigationImage}
+                source={require('./assets/bus.png')}
+                resizeMode={'contain'}
               />
-            </TouchableOpacity>
-          </View>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('About')}
+          >
+            <View style={styles.navigationBox}>
+              <Text style={styles.navigationText}> About Us</Text>
+
+              <Image
+                style={styles.navigationImage}
+                source={require('./assets/logo.png')}
+                resizeMode={'contain'}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
-        <View style={styles.horizontalLine} />
-        {/* <View>
-          <Text style={styles.informationText}>Pardon our dust!</Text>
-          <Text style={styles.informationText}>
-            Just like campus, this app is still under construction!
-          </Text>
-          <Text style={styles.informationText}>
-            Check back soon for new features!
-          </Text>
-        </View>
-        <View style={styles.horizontalLine} /> */}
       </View>
     )
   }

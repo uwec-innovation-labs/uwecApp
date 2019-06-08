@@ -1,20 +1,22 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { Dimensions } from 'react-native'
 
 export default StyleSheet.create({
   navigationContainer: {
-    flexDirection: 'row'
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    height: '100%'
   },
   navigationBox: {
-    flex: 1,
+    margin: 2,
+    padding: 2,
     backgroundColor: 'rgba(122, 122, 122, 0.11)',
-    height: 200,
-    width: 200,
-    margin: 10,
     alignItems: 'center',
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: 'rgba(122, 122, 122, 0.11)'
+    flexDirection: 'row',
+    width: Dimensions.get('window').width / 2 - 4,
+    height: Dimensions.get('window').height / 2
   },
   informationText: {
     fontSize: 16,
@@ -51,7 +53,6 @@ export default StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'space-between'
   },
-  containerLaundryText: {},
   title: {
     fontSize: 25,
     textAlign: 'center',
@@ -69,11 +70,7 @@ export default StyleSheet.create({
   },
   navigationImage: {
     flex: 1,
-    height: '100%',
-    //width: undefined,
-    alignSelf: 'stretch',
-    transform: [{ scale: 0.7 }],
-    marginTop: 0
+    height: 50
   },
   navigationImageLogo: {
     flex: 1,
@@ -134,4 +131,4 @@ export default StyleSheet.create({
     width: '40%',
     borderRadius: 10
   }
-});
+})
