@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Text,
   View,
   Image,
   TouchableOpacity,
   TouchableHighlight
-} from 'react-native';
-import LaundryScreen from './Laundry.js';
-import styles from './StyleSheet';
-import SpectatorScreen from './Spectator.js';
-import BusTrackingScreen from './BusTracking.js';
-import AboutScreen from './About.js';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+} from 'react-native'
+import LaundryScreen from './Laundry.js'
+import styles from './StyleSheet'
+import SpectatorScreen from './Spectator.js'
+import BusTrackingScreen from './BusTracking.js'
+import AboutScreen from './About.js'
+import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -21,24 +21,25 @@ class HomeScreen extends React.Component {
       position: 'absolute',
       left: 0
     }
-  };
+  }
 
   render = () => {
     return (
       <View>
         <View style={styles.navigationContainer}>
-          <View style={styles.navigationBox}>
-            <Text style={styles.navigationText}>Laundry Notifier</Text>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Laundry')}
-            >
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Laundry')}
+          >
+            <View style={styles.navigationBox}>
+              <Text style={styles.navigationText}>Laundry Notifier</Text>
+
               <Image
                 style={styles.navigationImage}
                 source={require('./assets/laundry.png')}
                 resizeMode="contain"
               />
-            </TouchableOpacity>
-          </View>
+            </View>
+          </TouchableOpacity>
           <View style={styles.navigationBox}>
             <Text style={styles.navigationText}> Spectator</Text>
             <TouchableOpacity
@@ -93,8 +94,8 @@ class HomeScreen extends React.Component {
         </View>
         <View style={styles.horizontalLine} /> */}
       </View>
-    );
-  };
+    )
+  }
 }
 
 const HomePageNavigator = createStackNavigator({
@@ -103,7 +104,7 @@ const HomePageNavigator = createStackNavigator({
   Spectator: { screen: SpectatorScreen },
   BusTracking: { screen: BusTrackingScreen },
   About: { screen: AboutScreen }
-});
+})
 
-const App = createAppContainer(HomePageNavigator);
-export default App;
+const App = createAppContainer(HomePageNavigator)
+export default App
