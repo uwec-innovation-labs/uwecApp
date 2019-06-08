@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { View, Text, Image, Linking, TouchableOpacity } from 'react-native';
-import styles from './StyleSheet';
+import React, { Component } from 'react'
+import { View, Text, Image, Linking, TouchableOpacity } from 'react-native'
+import styles from './assets/Styles/StyleSheet.js'
 
 class AboutScreen extends React.Component {
   static navigationOptions = {
     title: 'About'
-  };
+  }
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.container}>
           <Image
-            source={require('./assets/logo.png')}
+            source={require('./assets/Images/logo.png')}
             style={styles.logoImage}
           />
         </View>
@@ -40,8 +40,8 @@ class AboutScreen extends React.Component {
           </TouchableOpacity>
         </View>
       </View>
-    );
+    )
   }
 }
 
-export default AboutScreen;
+export default AboutScreen

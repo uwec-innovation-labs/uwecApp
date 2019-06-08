@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 11277,
-  "expoServerNgrokUrl": "https://5c-cx2.anonymous.uwecapp.exp.direct",
-  "packagerNgrokUrl": "https://packager.5c-cx2.anonymous.uwecapp.exp.direct",
-  "ngrokPid": 11313,
+  "packagerPid": 9082,
+  "expoServerNgrokUrl": "https://5c-cx2.sullivanprell.uwecapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.5c-cx2.sullivanprell.uwecapp.exp.direct",
+  "ngrokPid": 9096,
   "webpackServerPort": null
 }
