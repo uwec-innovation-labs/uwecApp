@@ -34,7 +34,7 @@ export default StyleSheet.create({
     padding: 2,
     backgroundColor: 'rgba(122, 122, 122, 0.11)',
     alignItems: 'center',
-    width: Dimensions.get('window').width - 20,
+    width: Dimensions.get('window').width - 90,
     height: Dimensions.get('window').height / 2
   },
   newsImage: {
