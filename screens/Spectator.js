@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Text } from 'react-native'
-import styles from '../app-assets/app-styles/SpectatorStyles.js.js.js'
+import styles from '../assets/app-styles/SpectatorStyles.js.js.js.js'
 
 class SpectatorScreen extends Component {
   static navigationOptions = {
