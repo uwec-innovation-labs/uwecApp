@@ -26,61 +26,63 @@ class HomeScreen extends React.Component {
 
   render = () => {
     return (
-      <View style={styles.navigationContainer}>
-        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Laundry')}
-          >
-            <View style={styles.navigationBox}>
-              <Text style={styles.navigationText}>Laundry Notifier</Text>
+      <View style={styles.topContainer}>
+        <View style={styles.navigationContainer}>
+          <View style={styles.navigationContainerChild}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Laundry')}
+            >
+              <View style={styles.navigationBox}>
+                <Text style={styles.navigationText}>Laundry Notifier</Text>
 
-              <Image
-                style={styles.navigationImage}
-                source={require('./assets/images/laundry.png')}
-                resizeMode={'contain'}
-              />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Spectator')}
-          >
-            <View style={styles.navigationBox}>
-              <Text style={styles.navigationText}> Spectator</Text>
-              <Image
-                style={styles.navigationImage}
-                source={require('./assets/images/news.png')}
-                resizeMode={'contain'}
-              />
-            </View>
-          </TouchableOpacity>
-        </View>
-        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('BusTracking')}
-          >
-            <View style={styles.navigationBox}>
-              <Text style={styles.navigationText}> Bus Tracking</Text>
+                <Image
+                  style={styles.navigationImage}
+                  source={require('./assets/images/laundry.png')}
+                  resizeMode={'contain'}
+                />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Spectator')}
+            >
+              <View style={styles.navigationBox}>
+                <Text style={styles.navigationText}> Spectator</Text>
+                <Image
+                  style={styles.navigationImage}
+                  source={require('./assets/images/news.png')}
+                  resizeMode={'contain'}
+                />
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.navigationContainerChild}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('BusTracking')}
+            >
+              <View style={styles.navigationBox}>
+                <Text style={styles.navigationText}>Bus Tracking</Text>
 
-              <Image
-                style={styles.navigationImage}
-                source={require('./assets/images/bus.png')}
-                resizeMode={'contain'}
-              />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('About')}
-          >
-            <View style={styles.navigationBox}>
-              <Text style={styles.navigationText}> About Us</Text>
+                <Image
+                  style={styles.navigationImage}
+                  source={require('./assets/images/bus.png')}
+                  resizeMode={'contain'}
+                />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('About')}
+            >
+              <View style={styles.navigationBox}>
+                <Text style={styles.navigationText}>About Us</Text>
 
-              <Image
-                style={styles.navigationImage}
-                source={require('./assets/images/logo.png')}
-                resizeMode={'contain'}
-              />
-            </View>
-          </TouchableOpacity>
+                <Image
+                  style={styles.navigationImageLogo}
+                  source={require('./assets/images/logo.png')}
+                  resizeMode={'contain'}
+                />
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     )
