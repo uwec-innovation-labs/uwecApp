@@ -10,6 +10,14 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  bottomContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginTop: (Dimensions.get('window').height / 2) * 0.5 - 80,
+    alignItems: 'center'
+    //justifyContent: 'space-between'
+  },
+
   navigationContainer: {
     flex: 1,
     flexDirection: 'row',

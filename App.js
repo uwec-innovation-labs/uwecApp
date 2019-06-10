@@ -84,6 +84,10 @@ class HomeScreen extends React.Component {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.bottomContainer}>
+          <Text>Pardon our dust this app is still under construction!</Text>
+          <Text>Check back soon for new features and exciting updates!</Text>
+        </View>
       </View>
     )
   }

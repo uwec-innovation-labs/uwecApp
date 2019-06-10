@@ -22,5 +22,12 @@ export default StyleSheet.create({
     height: '60%', //30
     width: '100%',
     paddingBottom: '5%'
+  },
+  containerLaundryText: {
+    textAlign: 'center',
+    alignItems: 'center'
+  },
+  laundryText: {
+    fontSize: 18
   }
 })

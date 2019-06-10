@@ -75,14 +75,16 @@ class LaundryScreen extends Component {
           <Picker.Item label="Sutherland" value="sutherland" />
         </Picker>
         <View style={styles.containerLaundryText}>
-          <Text>Laundry Room Selected: {this.state.laundryRoom}</Text>
-          <Text>
+          <Text style={styles.laundryText}>
+            Laundry Room Selected: {this.state.laundryRoom}
+          </Text>
+          <Text style={styles.laundryText}>
             Number of Washers Available: {this.state.numWashersAvailable}
           </Text>
-          <Text>
+          <Text style={styles.laundryText}>
             Number of Dryers Available: {this.state.numDryersAvailable}
           </Text>
-          <Text>
+          <Text style={styles.laundryText}>
             Total Washers: {this.state.numWashers} | Total Dryers:{' '}
             {this.state.numDryers}
           </Text>
