@@ -7,11 +7,11 @@ import {
   TouchableHighlight,
   Dimensions
 } from 'react-native'
-import LaundryScreen from './screens/Laundry.js.js.js'
+import LaundryScreen from './screens/Laundry.js'
 import styles from './assets/styles/HomeScreenStyles.js'
 import SpectatorScreen from './screens/Spectator.js'
-import BusTrackingScreen from './screens/BusTracking.js.js.js'
-import AboutScreen from './screens/About.js.js.js'
+import BusTrackingScreen from './screens/BusTracking.js'
+import AboutScreen from './screens/About.js'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 class HomeScreen extends React.Component {

@@ -7,7 +7,7 @@ import {
   RCTNativeAppEventEmitter,
   Picker
 } from 'react-native'
-import styles from '../app-assets/app-styles/LaundryStyles.js.js.js'
+import styles from '../app-assets/app-styles/LaundryStyles.js'
 const axios = require('axios')
 
 class LaundryScreen extends Component {
