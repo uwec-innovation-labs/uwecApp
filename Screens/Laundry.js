@@ -1,25 +1,26 @@
 //Clearwater Labs 2019
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   View,
   StyleSheet,
   Text,
   RCTNativeAppEventEmitter,
   Picker
-} from 'react-native';
-const axios = require('axios');
+} from 'react-native'
+import styles from '../assets/styles/LaundryStyles.js'
+const axios = require('axios')
 
 class LaundryScreen extends Component {
   static navigationOptions = {
     title: 'Laundry Notifier'
-  };
+  }
   state = {
     laundryRoom: '',
     numDryers: '',
     numWashers: '',
     numDryersAvailable: '',
     numWashersAvailable: ''
-  };
+  }
 
   updateLaundry = laundry => {
     //this.laundryRoomSelection(this.state.laundryRoom);
@@ -45,9 +46,9 @@ class LaundryScreen extends Component {
         numWashers: result.data.data.laundryRoom.totalNumWashers,
         numDryersAvailable: result.data.data.laundryRoom.dryersAvailable,
         numWashersAvailable: result.data.data.laundryRoom.washersAvailable
-      });
-    });
-  };
+      })
+    })
+  }
 
   render() {
     //const { navigate } = this.props.navigation;
@@ -87,14 +88,8 @@ class LaundryScreen extends Component {
           </Text>
         </View>
       </View>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center'
-  }
-});
-
-export default LaundryScreen;
+export default LaundryScreen

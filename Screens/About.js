@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, Image, Linking, TouchableOpacity } from 'react-native'
-import styles from './assets/Styles/StyleSheet.js'
+import styles from '../assets/styles/StyleSheet.js'
 
 class AboutScreen extends React.Component {
   static navigationOptions = {
@@ -11,7 +11,7 @@ class AboutScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.container}>
           <Image
-            source={require('./assets/Images/logo.png')}
+            source={require('../assets/images/logo.png')}
             style={styles.logoImage}
           />
         </View>

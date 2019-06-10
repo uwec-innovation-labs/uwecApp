@@ -7,11 +7,11 @@ import {
   TouchableHighlight,
   Dimensions
 } from 'react-native'
-import LaundryScreen from './Screens/Laundry.js'
-import styles from './assets/Styles/StyleSheet.js'
-import SpectatorScreen from './Screens/Spectator.js'
-import BusTrackingScreen from './Screens/BusTracking.js'
-import AboutScreen from './Screens/About.js'
+import LaundryScreen from './screens/Laundry.js'
+import styles from './assets/styles/HomeScreenStyles.js'
+import SpectatorScreen from './screens/Spectator.js'
+import BusTrackingScreen from './screens/BusTracking.js'
+import AboutScreen from './screens/About.js'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 class HomeScreen extends React.Component {
@@ -36,7 +36,7 @@ class HomeScreen extends React.Component {
 
               <Image
                 style={styles.navigationImage}
-                source={require('./assets/Images/laundry.png')}
+                source={require('./assets/images/laundry.png')}
                 resizeMode={'contain'}
               />
             </View>
@@ -48,7 +48,7 @@ class HomeScreen extends React.Component {
               <Text style={styles.navigationText}> Spectator</Text>
               <Image
                 style={styles.navigationImage}
-                source={require('./assets/Images/news.png')}
+                source={require('./assets/images/news.png')}
                 resizeMode={'contain'}
               />
             </View>
@@ -63,7 +63,7 @@ class HomeScreen extends React.Component {
 
               <Image
                 style={styles.navigationImage}
-                source={require('./assets/Images/bus.png')}
+                source={require('./assets/images/bus.png')}
                 resizeMode={'contain'}
               />
             </View>
@@ -76,7 +76,7 @@ class HomeScreen extends React.Component {
 
               <Image
                 style={styles.navigationImage}
-                source={require('./assets/Images/logo.png')}
+                source={require('./assets/images/logo.png')}
                 resizeMode={'contain'}
               />
             </View>
