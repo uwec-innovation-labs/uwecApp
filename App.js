@@ -13,7 +13,9 @@ import SpectatorScreen from './screens/Spectator.js'
 import BusTrackingScreen from './screens/BusTracking.js'
 import AboutScreen from './screens/About.js'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
-
+import { Permissions, Notifications } from 'expo'
+const PUSH_REGISTRATION_ENDPOINT = 'http://3217019a.ngrok.io/token'
+const MESSAGE_ENDPOINT = 'http://3217019a.ngrok.io/message'
 class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'UWEC',
@@ -23,10 +25,75 @@ class HomeScreen extends React.Component {
       left: 0
     }
   }
+  state = {
+    currentDegrees: '',
+    currentPrecipitation: 0,
+    currentStatus: '',
+    notification: null,
+    messageText: ''
+  }
+  registerForPushNotifications = async () => {
+    const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS)
+    if (status !== 'granted') {
+      return
+    }
+    let token = await Notifications.getExpoPushTokenAsync()
+    this.notificationSubscription = Notifications.addListener(
+      this.handleNotification
+    )
+    return fetch(PUSH_REGISTRATION_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        token: {
+          value: token
+        },
+        user: {
+          username: 'uwec',
+          name: 'uwecApp'
+        }
+      })
+    })
+  }
+
+  handleNotification = notification => {
+    this.setState({ notification })
+  }
+  componentDidMount() {
+    this.registerForPushNotifications()
+  }
+  weather = () => {
+    axios({
+      url: 'http://15a6452d.ngrok.io/graphql',
+      method: 'post',
+      data: {
+        query: `
+        {
+          weather {
+            degrees
+            status
+            precipitation
+          }
+        }
+        `
+      }
+    }).then(result => {
+      this.setState({
+        currentDegrees: result.data.data.degrees,
+        currentPrecipitation: result.data.data.precipitation,
+        currentStatus: result.data.data.precipitation
+      })
+    })
+  }
 
   render = () => {
+    //this.registerForPushNotifications()
     return (
       <View style={styles.topContainer}>
+        <Text />
         <View style={styles.navigationContainer}>
           <View style={styles.navigationContainerChild}>
             <TouchableOpacity
@@ -88,6 +155,7 @@ class HomeScreen extends React.Component {
           <Text>Pardon our dust this app is still under construction!</Text>
           <Text>Check back soon for new features and exciting updates!</Text>
         </View>
+        {this.state.notification ? this.renderNotification() : null}
       </View>
     )
   }
